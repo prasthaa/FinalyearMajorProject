@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block title %}Camera Attendance{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8  offset-lg-2">
+            <div class="upload">
+                <h3 class="font" style="color:white">CAMERA ATTENDANCE</h3>
+            </div>
+            <section class="videos">
+                <iframe src="{{ url_for('capture_feed') }}" frameborder="0" allowfullscreen></iframe>
+            </section>
+            <form method="POST" class="capture-form">
+                <input class="btn btn-primary btn-lg subbutton" type="submit" value="Capture" name="capture" />
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
